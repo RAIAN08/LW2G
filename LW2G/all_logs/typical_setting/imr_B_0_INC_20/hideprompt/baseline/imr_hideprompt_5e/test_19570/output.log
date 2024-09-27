@@ -1,0 +1,273 @@
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+200
+[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59], [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99], [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139], [140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159], [160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179], [180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199]]
+Creating original model: vit_base_patch16_224
+[Sequential(
+  (0): Linear(in_features=768, out_features=1536, bias=True)
+  (1): GELU(approximate='none')
+  (2): Dropout(p=0.0, inplace=False)
+), Sequential(
+  (0): Linear(in_features=1536, out_features=768, bias=True)
+  (1): Dropout(p=0.0, inplace=False)
+)]
+Creating model: vit_base_patch16_224
+Namespace(aa=None, angle_epsilon=0.18, batch_size=24, batchwise_prompt=False, ca_lr=0.005, ca_storage_efficient_method='multi-centroid', clip_grad=1.0, color_jitter=None, config='imr_hideprompt_5e', cooldown_epochs=10, crct_epochs=30, data_path='./datasets/', dataset='Split-Imagenet-R', dataset_name='imr', decay_epochs=30, decay_rate=0.1, device='cuda', dist_url='env://', distributed=False, drop=0.0, drop_path=0.0, e_prompt_layer_idx=[0, 1, 2, 3, 4], embedding_key='cls', epochs=150, eval=False, freeze=['blocks', 'patch_embed', 'cls_token', 'norm', 'pos_embed'], g_prompt_layer_idx=[], g_prompt_length=5, global_pool='token', head_type='token', initializer='uniform', input_size=224, larger_prompt_lr=True, length=20, lr=0.03, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, mask_first_epoch=False, milestones=[10], min_lr=1e-05, model='vit_base_patch16_224', model_num=0, momentum=0.9, n_centroids=10, nb_classes=200, no_auto=1, not_train_ca=False, num_tasks=10, num_workers=4, opt='adam', opt_betas=(0.9, 0.999), opt_eps=1e-08, original_model='vit_base_patch16_224', original_model_mlp_structure=[2], output_dir='./typical_setting/imr_B_0_INC_20/hideprompt/baseline/imr_hideprompt_5e/test_19570', patience_epochs=10, pin_mem=True, predefined_key='', pretrained=True, print_freq=10, prompt_key=False, prompt_key_init='uniform', prompt_momentum=0.01, prompt_pool=True, pull_constraint=True, pull_constraint_coeff=1.0, recount=1, reg=0.5, reinit_optimizer=True, remode='pixel', reprob=0.0, same_key_value=False, sched='cosine', seed=42, shared_prompt_key=False, shared_prompt_pool=True, shuffle=False, size=10, smoothing=0.1, subparser_name='imr_hideprompt_5e', task_inc=False, threshold=0.95, threshold2=0.1, threshold_pretrained=0.95, top_k=1, topk_old_subspace=1, train_inference_task_only=False, train_interpolation='bicubic', train_mask=True, trained_original_model='./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505', unscale_lr=True, use_e_prompt=True, use_g_prompt=False, use_old_subspace_forward=0, use_pre_gradient_constraint=1, use_prefix_tune_for_e_prompt=True, use_prefix_tune_for_g_prompt=False, use_prompt_mask=True, warmup_epochs=0, warmup_lr=1e-06, weight_decay=0.0, world_size=1)
+number of params: 1689800
+Start training for 150 epochs
+args.config:  imr_hideprompt_5e
+>>> pretrained data exists
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+layer 0 item key r 235
+----------------------------------------
+Gradient Constraints Summary (768, 235)
+----------------------------------------
+layer 1 item key r 150
+----------------------------------------
+Gradient Constraints Summary (768, 150)
+----------------------------------------
+layer 2 item key r 114
+----------------------------------------
+Gradient Constraints Summary (768, 114)
+----------------------------------------
+layer 3 item key r 59
+----------------------------------------
+Gradient Constraints Summary (768, 59)
+----------------------------------------
+layer 4 item key r 31
+----------------------------------------
+Gradient Constraints Summary (768, 31)
+----------------------------------------
+layer 5 item key r 44
+----------------------------------------
+Gradient Constraints Summary (768, 44)
+----------------------------------------
+layer 6 item key r 45
+----------------------------------------
+Gradient Constraints Summary (768, 45)
+----------------------------------------
+layer 7 item key r 45
+----------------------------------------
+Gradient Constraints Summary (768, 45)
+----------------------------------------
+layer 8 item key r 45
+----------------------------------------
+Gradient Constraints Summary (768, 45)
+----------------------------------------
+layer 9 item key r 45
+----------------------------------------
+Gradient Constraints Summary (768, 45)
+----------------------------------------
+layer 10 item key r 45
+----------------------------------------
+Gradient Constraints Summary (768, 45)
+----------------------------------------
+layer 11 item key r 49
+----------------------------------------
+Gradient Constraints Summary (768, 49)
+----------------------------------------
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+e 5 key torch.Size([768, 768])
+item key
+e 6 key torch.Size([768, 768])
+item key
+e 7 key torch.Size([768, 768])
+item key
+e 8 key torch.Size([768, 768])
+item key
+e 9 key torch.Size([768, 768])
+item key
+e 10 key torch.Size([768, 768])
+item key
+e 11 key torch.Size([768, 768])
+item key
+>>> processing on task: 0
+----------------def modify_available_list----------------
+>>> before modify: {}
+>>> : task0
+>>> after modify: {0: 0}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task1_checkpoint.pth
+>>> : task0, no need to re-init params
+* Acc@task 100.000 Acc@1 83.288 Acc@5 94.070 loss 1.144
+[Average accuracy till task1]	Acc@task: 100.0000	Acc@1: 83.2884	Acc@5: 94.0701	Loss: 1.1438
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/baseline/imr_hideprompt_5e/test_19570/array_log.txt
+>>> processing on task: 1
+----------------def modify_available_list----------------
+>>> before modify: {0: 0}
+>>> : task1
+>>> after modify: {0: 0, 1: 1}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task2_checkpoint.pth
+>>> : task1, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+* Acc@task 79.515 Acc@1 76.280 Acc@5 90.296 loss 1.307
+* Acc@task 82.051 Acc@1 81.481 Acc@5 92.877 loss 1.126
+[Average accuracy till task2]	Acc@task: 80.7831	Acc@1: 78.8809	Acc@5: 91.5870	Loss: 1.2166	Forgetting: 7.0081	Backward: -7.0081
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/baseline/imr_hideprompt_5e/test_19570/array_log.txt
+>>> processing on task: 2
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1}
+>>> : task2
+>>> after modify: {0: 0, 1: 1, 2: 2}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task3_checkpoint.pth
+>>> : task2, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+* Acc@task 74.124 Acc@1 73.585 Acc@5 86.792 loss 1.391
+* Acc@task 79.772 Acc@1 78.917 Acc@5 92.593 loss 1.160
+* Acc@task 79.126 Acc@1 67.476 Acc@5 88.835 loss 1.407
+[Average accuracy till task3]	Acc@task: 77.6741	Acc@1: 73.3260	Acc@5: 89.4067	Loss: 1.3194	Forgetting: 6.1338	Backward: -6.1338
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/baseline/imr_hideprompt_5e/test_19570/array_log.txt
+>>> processing on task: 3
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2}
+>>> : task3
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task4_checkpoint.pth
+>>> : task3, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+* Acc@task 72.776 Acc@1 72.237 Acc@5 85.445 loss 1.428
+* Acc@task 74.359 Acc@1 74.929 Acc@5 89.459 loss 1.279
+* Acc@task 74.272 Acc@1 70.874 Acc@5 85.922 loss 1.377
+* Acc@task 71.299 Acc@1 70.695 Acc@5 89.426 loss 1.428
+[Average accuracy till task4]	Acc@task: 73.1766	Acc@1: 72.1837	Acc@5: 87.5629	Loss: 1.3779	Forgetting: 5.8680	Backward: -4.7353
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/baseline/imr_hideprompt_5e/test_19570/array_log.txt
+>>> processing on task: 4
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3}
+>>> : task4
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task5_checkpoint.pth
+>>> : task4, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+* Acc@task 66.038 Acc@1 69.542 Acc@5 82.480 loss 1.615
+* Acc@task 69.231 Acc@1 71.510 Acc@5 88.319 loss 1.364
+* Acc@task 71.359 Acc@1 69.903 Acc@5 83.010 loss 1.441
+* Acc@task 64.653 Acc@1 66.767 Acc@5 85.498 loss 1.516
+* Acc@task 71.507 Acc@1 70.411 Acc@5 87.397 loss 1.282
+[Average accuracy till task5]	Acc@task: 68.5574	Acc@1: 69.6266	Acc@5: 85.3409	Loss: 1.4437	Forgetting: 7.1541	Backward: -6.3046
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/baseline/imr_hideprompt_5e/test_19570/array_log.txt
+>>> processing on task: 5
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4}
+>>> : task5
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task6_checkpoint.pth
+>>> : task5, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+* Acc@task 62.264 Acc@1 66.307 Acc@5 80.054 loss 1.688
+* Acc@task 64.387 Acc@1 68.946 Acc@5 84.615 loss 1.471
+* Acc@task 68.447 Acc@1 67.961 Acc@5 83.010 loss 1.513
+* Acc@task 63.142 Acc@1 63.746 Acc@5 81.873 loss 1.595
+* Acc@task 68.767 Acc@1 67.945 Acc@5 86.849 loss 1.334
+* Acc@task 69.103 Acc@1 68.106 Acc@5 84.053 loss 1.424
+[Average accuracy till task6]	Acc@task: 66.0184	Acc@1: 67.1687	Acc@5: 83.4091	Loss: 1.5041	Forgetting: 8.3688	Backward: -7.6891
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/baseline/imr_hideprompt_5e/test_19570/array_log.txt
+>>> processing on task: 6
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+>>> : task6
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task7_checkpoint.pth
+>>> : task6, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+* Acc@task 62.264 Acc@1 65.499 Acc@5 79.784 loss 1.776
+* Acc@task 60.399 Acc@1 66.667 Acc@5 80.057 loss 1.622
+* Acc@task 68.447 Acc@1 66.019 Acc@5 82.039 loss 1.641
+* Acc@task 63.444 Acc@1 62.538 Acc@5 80.363 loss 1.695
+* Acc@task 66.301 Acc@1 65.479 Acc@5 83.288 loss 1.449
+* Acc@task 66.777 Acc@1 67.442 Acc@5 83.056 loss 1.498
+* Acc@task 67.003 Acc@1 64.310 Acc@5 82.492 loss 1.593
+[Average accuracy till task7]	Acc@task: 64.9480	Acc@1: 65.4219	Acc@5: 81.5826	Loss: 1.6106	Forgetting: 8.5353	Backward: -7.9690
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/baseline/imr_hideprompt_5e/test_19570/array_log.txt
+>>> processing on task: 7
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6}
+>>> : task7
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task8_checkpoint.pth
+>>> : task7, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+* Acc@task 61.725 Acc@1 64.420 Acc@5 78.437 loss 1.884
+* Acc@task 58.405 Acc@1 64.103 Acc@5 79.202 loss 1.775
+* Acc@task 69.417 Acc@1 67.476 Acc@5 81.553 loss 1.688
+* Acc@task 62.236 Acc@1 62.840 Acc@5 79.456 loss 1.766
+* Acc@task 63.288 Acc@1 64.658 Acc@5 80.274 loss 1.555
+* Acc@task 63.787 Acc@1 65.116 Acc@5 80.731 loss 1.641
+* Acc@task 65.320 Acc@1 62.290 Acc@5 80.808 loss 1.550
+* Acc@task 63.258 Acc@1 61.364 Acc@5 81.439 loss 1.806
+[Average accuracy till task8]	Acc@task: 63.4294	Acc@1: 64.0332	Acc@5: 80.2376	Loss: 1.7082	Forgetting: 8.3234	Backward: -7.8379
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/baseline/imr_hideprompt_5e/test_19570/array_log.txt
+>>> processing on task: 8
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}
+>>> : task8
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task9_checkpoint.pth
+>>> : task8, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+* Acc@task 58.491 Acc@1 60.916 Acc@5 77.358 loss 2.026
+* Acc@task 58.120 Acc@1 64.957 Acc@5 79.202 loss 1.799
+* Acc@task 70.388 Acc@1 65.534 Acc@5 80.583 loss 1.739
+* Acc@task 62.538 Acc@1 61.027 Acc@5 77.946 loss 1.890
+* Acc@task 64.110 Acc@1 63.014 Acc@5 79.726 loss 1.645
+* Acc@task 61.130 Acc@1 63.455 Acc@5 81.063 loss 1.694
+* Acc@task 60.269 Acc@1 57.912 Acc@5 79.798 loss 1.740
+* Acc@task 60.227 Acc@1 61.364 Acc@5 79.167 loss 1.857
+* Acc@task 67.763 Acc@1 71.382 Acc@5 84.539 loss 1.323
+[Average accuracy till task9]	Acc@task: 62.5595	Acc@1: 63.2846	Acc@5: 79.9314	Loss: 1.7459	Forgetting: 9.0437	Backward: -8.6189
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/baseline/imr_hideprompt_5e/test_19570/array_log.txt
+>>> processing on task: 9
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8}
+>>> : task9
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task10_checkpoint.pth
+>>> : task9, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+* Acc@task 58.491 Acc@1 60.916 Acc@5 75.741 loss 2.010
+* Acc@task 59.829 Acc@1 63.818 Acc@5 77.493 loss 1.877
+* Acc@task 70.388 Acc@1 65.534 Acc@5 81.068 loss 1.712
+* Acc@task 61.631 Acc@1 60.423 Acc@5 75.529 loss 1.942
+* Acc@task 60.548 Acc@1 61.370 Acc@5 78.082 loss 1.743
+* Acc@task 57.475 Acc@1 61.130 Acc@5 77.741 loss 1.859
+* Acc@task 61.616 Acc@1 59.259 Acc@5 77.441 loss 1.773
+* Acc@task 59.470 Acc@1 58.712 Acc@5 77.273 loss 1.971
+* Acc@task 68.421 Acc@1 70.724 Acc@5 83.553 loss 1.365
+* Acc@task 62.857 Acc@1 62.381 Acc@5 81.190 loss 1.755
+[Average accuracy till task10]	Acc@task: 62.0726	Acc@1: 62.4267	Acc@5: 78.5111	Loss: 1.8006	Forgetting: 8.8917	Backward: -8.5141
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/baseline/imr_hideprompt_5e/test_19570/array_log.txt
+Total training time: 5:07:19

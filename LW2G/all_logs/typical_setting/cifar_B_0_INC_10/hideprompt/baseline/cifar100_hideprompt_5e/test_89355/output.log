@@ -1,0 +1,269 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+100
+[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], [20, 21, 22, 23, 24, 25, 26, 27, 28, 29], [30, 31, 32, 33, 34, 35, 36, 37, 38, 39], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [50, 51, 52, 53, 54, 55, 56, 57, 58, 59], [60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [70, 71, 72, 73, 74, 75, 76, 77, 78, 79], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89], [90, 91, 92, 93, 94, 95, 96, 97, 98, 99]]
+Creating original model: vit_base_patch16_224
+[Sequential(
+  (0): Linear(in_features=768, out_features=1536, bias=True)
+  (1): GELU(approximate='none')
+  (2): Dropout(p=0.0, inplace=False)
+), Sequential(
+  (0): Linear(in_features=1536, out_features=768, bias=True)
+  (1): Dropout(p=0.0, inplace=False)
+)]
+Creating model: vit_base_patch16_224
+Namespace(aa=None, angle_epsilon=0.18, batch_size=24, batchwise_prompt=False, ca_epochs=30, ca_lr=0.005, ca_storage_efficient_method='multi-centroid', clip_grad=1.0, color_jitter=None, config='cifar100_hideprompt_5e', cooldown_epochs=10, crct_epochs=30, data_path='./datasets/', dataset='Split-CIFAR100', dataset_name='cifar100', decay_epochs=30, decay_rate=0.1, device='cuda', dist_url='env://', distributed=False, drop=0.0, drop_path=0.0, e_prompt_layer_idx=[0, 1, 2, 3, 4], embedding_key='cls', epochs=50, eval=False, freeze=['blocks', 'patch_embed', 'cls_token', 'norm', 'pos_embed'], g_prompt_layer_idx=[], g_prompt_length=5, global_pool='token', head_type='token', initializer='uniform', input_size=224, larger_prompt_lr=True, length=5, lr=0.03, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, mask_first_epoch=False, milestones=[10], min_lr=1e-05, model='vit_base_patch16_224', model_num=0, momentum=0.9, n_centroids=10, nb_classes=100, no_auto=1, not_train_ca=False, num_tasks=10, num_workers=4, opt='adam', opt_betas=(0.9, 0.999), opt_eps=1e-08, original_model='vit_base_patch16_224', original_model_mlp_structure=[2], output_dir='./typical_setting/cifar_B_0_INC_10/hideprompt/baseline/cifar100_hideprompt_5e/test_89355', patience_epochs=10, pin_mem=True, predefined_key='', pretrained=True, print_freq=10, prompt_key=False, prompt_key_init='uniform', prompt_momentum=0.01, prompt_pool=True, pull_constraint=True, pull_constraint_coeff=1.0, recount=1, reg=0.1, reinit_optimizer=True, remode='pixel', reprob=0.0, same_key_value=False, sched='step', seed=42, shared_prompt_key=False, shared_prompt_pool=True, shuffle=False, size=10, smoothing=0.1, subparser_name='cifar100_hideprompt_5e', task_inc=False, threshold=0.95, threshold2=0.1, threshold_pretrained=0.95, top_k=1, topk_old_subspace=1, train_inference_task_only=False, train_interpolation='bicubic', train_mask=True, trained_original_model='./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279', unscale_lr=True, use_e_prompt=True, use_g_prompt=False, use_old_subspace_forward=0, use_pre_gradient_constraint=1, use_prefix_tune_for_e_prompt=True, use_prefix_tune_for_g_prompt=False, use_prompt_mask=True, warmup_epochs=0, warmup_lr=1e-06, weight_decay=0.0, world_size=1)
+number of params: 460900
+Start training for 50 epochs
+args.config:  cifar100_hideprompt_5e
+>>> pretrained data exists
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+layer 0 item key r 27
+----------------------------------------
+Gradient Constraints Summary (768, 27)
+----------------------------------------
+layer 1 item key r 84
+----------------------------------------
+Gradient Constraints Summary (768, 84)
+----------------------------------------
+layer 2 item key r 151
+----------------------------------------
+Gradient Constraints Summary (768, 151)
+----------------------------------------
+layer 3 item key r 259
+----------------------------------------
+Gradient Constraints Summary (768, 259)
+----------------------------------------
+layer 4 item key r 78
+----------------------------------------
+Gradient Constraints Summary (768, 78)
+----------------------------------------
+layer 5 item key r 72
+----------------------------------------
+Gradient Constraints Summary (768, 72)
+----------------------------------------
+layer 6 item key r 71
+----------------------------------------
+Gradient Constraints Summary (768, 71)
+----------------------------------------
+layer 7 item key r 71
+----------------------------------------
+Gradient Constraints Summary (768, 71)
+----------------------------------------
+layer 8 item key r 71
+----------------------------------------
+Gradient Constraints Summary (768, 71)
+----------------------------------------
+layer 9 item key r 71
+----------------------------------------
+Gradient Constraints Summary (768, 71)
+----------------------------------------
+layer 10 item key r 73
+----------------------------------------
+Gradient Constraints Summary (768, 73)
+----------------------------------------
+layer 11 item key r 79
+----------------------------------------
+Gradient Constraints Summary (768, 79)
+----------------------------------------
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+e 5 key torch.Size([768, 768])
+item key
+e 6 key torch.Size([768, 768])
+item key
+e 7 key torch.Size([768, 768])
+item key
+e 8 key torch.Size([768, 768])
+item key
+e 9 key torch.Size([768, 768])
+item key
+e 10 key torch.Size([768, 768])
+item key
+e 11 key torch.Size([768, 768])
+item key
+>>> processing on task: 0
+----------------def modify_available_list----------------
+>>> before modify: {}
+>>> : task0
+>>> after modify: {0: 0}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task1_checkpoint.pth
+>>> : task0, no need to re-init params
+* Acc@task 100.000 Acc@1 99.400 Acc@5 100.000 loss 0.120
+[Average accuracy till task1]	Acc@task: 100.0000	Acc@1: 99.4000	Acc@5: 100.0000	Loss: 0.1197
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/baseline/cifar100_hideprompt_5e/test_89355/array_log.txt
+>>> processing on task: 1
+----------------def modify_available_list----------------
+>>> before modify: {0: 0}
+>>> : task1
+>>> after modify: {0: 0, 1: 1}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task2_checkpoint.pth
+>>> : task1, no need to re-init params
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+* Acc@task 93.200 Acc@1 96.400 Acc@5 100.000 loss 0.195
+* Acc@task 95.400 Acc@1 95.300 Acc@5 99.700 loss 0.290
+[Average accuracy till task2]	Acc@task: 94.3000	Acc@1: 95.8500	Acc@5: 99.8500	Loss: 0.2423	Forgetting: 3.0000	Backward: -3.0000
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/baseline/cifar100_hideprompt_5e/test_89355/array_log.txt
+>>> processing on task: 2
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1}
+>>> : task2
+>>> after modify: {0: 0, 1: 1, 2: 2}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task3_checkpoint.pth
+>>> : task2, no need to re-init params
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+* Acc@task 87.400 Acc@1 93.300 Acc@5 99.900 loss 0.276
+* Acc@task 91.900 Acc@1 94.000 Acc@5 99.300 loss 0.330
+* Acc@task 92.700 Acc@1 93.400 Acc@5 99.500 loss 0.311
+[Average accuracy till task3]	Acc@task: 90.6667	Acc@1: 93.5667	Acc@5: 99.5667	Loss: 0.3055	Forgetting: 3.7000	Backward: -3.7000
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/baseline/cifar100_hideprompt_5e/test_89355/array_log.txt
+>>> processing on task: 3
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2}
+>>> : task3
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task4_checkpoint.pth
+>>> : task3, no need to re-init params
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+* Acc@task 87.400 Acc@1 92.900 Acc@5 100.000 loss 0.280
+* Acc@task 88.100 Acc@1 91.200 Acc@5 98.800 loss 0.379
+* Acc@task 90.300 Acc@1 92.500 Acc@5 99.000 loss 0.338
+* Acc@task 89.100 Acc@1 91.700 Acc@5 98.600 loss 0.338
+[Average accuracy till task4]	Acc@task: 88.7250	Acc@1: 92.0750	Acc@5: 99.1000	Loss: 0.3336	Forgetting: 3.8333	Backward: -3.8333
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/baseline/cifar100_hideprompt_5e/test_89355/array_log.txt
+>>> processing on task: 4
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3}
+>>> : task4
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task5_checkpoint.pth
+>>> : task4, no need to re-init params
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+* Acc@task 86.600 Acc@1 92.200 Acc@5 99.700 loss 0.301
+* Acc@task 85.800 Acc@1 88.200 Acc@5 98.400 loss 0.460
+* Acc@task 87.200 Acc@1 90.800 Acc@5 98.700 loss 0.376
+* Acc@task 86.000 Acc@1 89.200 Acc@5 98.700 loss 0.378
+* Acc@task 84.400 Acc@1 90.800 Acc@5 99.200 loss 0.390
+[Average accuracy till task5]	Acc@task: 86.0000	Acc@1: 90.2400	Acc@5: 98.9400	Loss: 0.3811	Forgetting: 4.8500	Backward: -4.8500
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/baseline/cifar100_hideprompt_5e/test_89355/array_log.txt
+>>> processing on task: 5
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4}
+>>> : task5
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task6_checkpoint.pth
+>>> : task5, no need to re-init params
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+* Acc@task 84.700 Acc@1 91.300 Acc@5 99.100 loss 0.337
+* Acc@task 84.300 Acc@1 87.100 Acc@5 98.200 loss 0.485
+* Acc@task 86.600 Acc@1 89.700 Acc@5 98.300 loss 0.407
+* Acc@task 85.200 Acc@1 88.100 Acc@5 98.000 loss 0.418
+* Acc@task 80.800 Acc@1 87.300 Acc@5 99.000 loss 0.470
+* Acc@task 86.600 Acc@1 89.500 Acc@5 99.200 loss 0.385
+[Average accuracy till task6]	Acc@task: 84.7000	Acc@1: 88.8333	Acc@5: 98.6333	Loss: 0.4171	Forgetting: 5.4200	Backward: -5.4200
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/baseline/cifar100_hideprompt_5e/test_89355/array_log.txt
+>>> processing on task: 6
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+>>> : task6
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task7_checkpoint.pth
+>>> : task6, no need to re-init params
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+* Acc@task 83.200 Acc@1 90.200 Acc@5 98.700 loss 0.362
+* Acc@task 82.800 Acc@1 86.500 Acc@5 97.500 loss 0.503
+* Acc@task 84.800 Acc@1 87.700 Acc@5 97.700 loss 0.454
+* Acc@task 82.200 Acc@1 86.500 Acc@5 98.000 loss 0.470
+* Acc@task 80.800 Acc@1 86.900 Acc@5 98.600 loss 0.487
+* Acc@task 86.100 Acc@1 88.500 Acc@5 98.900 loss 0.398
+* Acc@task 86.100 Acc@1 88.500 Acc@5 98.000 loss 0.437
+[Average accuracy till task7]	Acc@task: 83.7143	Acc@1: 87.8286	Acc@5: 98.2000	Loss: 0.4445	Forgetting: 5.6333	Backward: -5.6333
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/baseline/cifar100_hideprompt_5e/test_89355/array_log.txt
+>>> processing on task: 7
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6}
+>>> : task7
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task8_checkpoint.pth
+>>> : task7, no need to re-init params
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+* Acc@task 82.100 Acc@1 89.500 Acc@5 98.400 loss 0.386
+* Acc@task 81.500 Acc@1 86.300 Acc@5 97.500 loss 0.525
+* Acc@task 83.800 Acc@1 87.200 Acc@5 97.400 loss 0.477
+* Acc@task 81.600 Acc@1 85.800 Acc@5 97.900 loss 0.492
+* Acc@task 80.200 Acc@1 85.900 Acc@5 98.400 loss 0.508
+* Acc@task 84.700 Acc@1 87.000 Acc@5 98.400 loss 0.449
+* Acc@task 82.100 Acc@1 86.100 Acc@5 97.700 loss 0.496
+* Acc@task 82.900 Acc@1 88.300 Acc@5 98.500 loss 0.409
+[Average accuracy till task8]	Acc@task: 82.3625	Acc@1: 87.0125	Acc@5: 98.0250	Loss: 0.4676	Forgetting: 5.8286	Backward: -5.8286
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/baseline/cifar100_hideprompt_5e/test_89355/array_log.txt
+>>> processing on task: 8
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}
+>>> : task8
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task9_checkpoint.pth
+>>> : task8, no need to re-init params
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+* Acc@task 82.200 Acc@1 88.700 Acc@5 98.100 loss 0.419
+* Acc@task 79.100 Acc@1 84.200 Acc@5 97.400 loss 0.584
+* Acc@task 82.300 Acc@1 86.300 Acc@5 97.000 loss 0.535
+* Acc@task 81.200 Acc@1 85.200 Acc@5 97.300 loss 0.511
+* Acc@task 77.400 Acc@1 85.700 Acc@5 98.300 loss 0.539
+* Acc@task 83.800 Acc@1 86.400 Acc@5 98.100 loss 0.473
+* Acc@task 82.000 Acc@1 86.000 Acc@5 97.200 loss 0.524
+* Acc@task 81.700 Acc@1 88.900 Acc@5 98.300 loss 0.396
+* Acc@task 87.700 Acc@1 91.800 Acc@5 99.200 loss 0.307
+[Average accuracy till task9]	Acc@task: 81.9333	Acc@1: 87.0222	Acc@5: 97.8778	Loss: 0.4764	Forgetting: 5.7625	Backward: -5.6875
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/baseline/cifar100_hideprompt_5e/test_89355/array_log.txt
+>>> processing on task: 9
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8}
+>>> : task9
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task10_checkpoint.pth
+>>> : task9, no need to re-init params
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+* Acc@task 81.900 Acc@1 87.900 Acc@5 98.200 loss 0.450
+* Acc@task 79.900 Acc@1 84.500 Acc@5 97.100 loss 0.603
+* Acc@task 81.900 Acc@1 85.900 Acc@5 96.700 loss 0.580
+* Acc@task 79.000 Acc@1 83.100 Acc@5 96.900 loss 0.613
+* Acc@task 76.400 Acc@1 83.700 Acc@5 97.600 loss 0.600
+* Acc@task 82.700 Acc@1 84.600 Acc@5 97.700 loss 0.512
+* Acc@task 81.300 Acc@1 85.700 Acc@5 96.800 loss 0.549
+* Acc@task 80.000 Acc@1 87.400 Acc@5 97.900 loss 0.448
+* Acc@task 86.900 Acc@1 90.800 Acc@5 99.000 loss 0.327
+* Acc@task 77.800 Acc@1 84.100 Acc@5 98.500 loss 0.539
+[Average accuracy till task10]	Acc@task: 80.7800	Acc@1: 85.7700	Acc@5: 97.6400	Loss: 0.5220	Forgetting: 6.1889	Backward: -6.1222
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/baseline/cifar100_hideprompt_5e/test_89355/array_log.txt
+Total training time: 5:47:53

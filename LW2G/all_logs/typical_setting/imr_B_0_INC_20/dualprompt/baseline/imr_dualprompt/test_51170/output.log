@@ -1,0 +1,247 @@
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+200
+[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59], [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99], [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139], [140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159], [160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179], [180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199]]
+Creating original model: vit_base_patch16_224
+Creating model: vit_base_patch16_224
+Namespace(aa=None, angle_epsilon=0.18, batch_size=24, batchwise_prompt=False, clip_grad=1.0, color_jitter=None, config='imr_dualprompt', cooldown_epochs=10, data_path='./datasets/', dataset='Split-Imagenet-R', dataset_name='imr', decay_epochs=30, decay_rate=0.1, device='cuda', dist_url='env://', distributed=False, drop=0.0, drop_path=0.0, e_prompt_layer_idx=[2, 3, 4], embedding_key='cls', epochs=50, eval=False, freeze=['blocks', 'patch_embed', 'cls_token', 'norm', 'pos_embed'], g_prompt_layer_idx=[0, 1], g_prompt_length=5, global_pool='token', head_type='token', initializer='uniform', input_size=224, length=20, lr=0.005, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, mask_first_epoch=False, min_lr=1e-05, model='vit_base_patch16_224', model_num=0, momentum=0.9, nb_classes=200, no_auto=1, num_tasks=10, num_workers=4, opt='adam', opt_betas=(0.9, 0.999), opt_eps=1e-08, original_model='vit_base_patch16_224', output_dir='./typical_setting/imr_B_0_INC_20/dualprompt/baseline/imr_dualprompt/test_51170', patience_epochs=10, pin_mem=True, predefined_key='', pretrained=True, print_freq=10, prompt_key=True, prompt_key_init='uniform', prompt_pool=True, pull_constraint=True, pull_constraint_coeff=1.0, recount=1, reinit_optimizer=True, remode='pixel', reprob=0.0, same_key_value=False, sched='constant', seed=42, separated_head=False, shared_prompt_key=False, shared_prompt_pool=True, shuffle=False, size=10, smoothing=0.1, subparser_name='imr_dualprompt', task_inc=False, threshold=0.95, threshold2=0.1, threshold_pretrained=0.95, top_k=1, topk_old_subspace=1, train_interpolation='bicubic', train_mask=True, unscale_lr=True, use_e_prompt=True, use_g_prompt=True, use_old_subspace_forward=0, use_pre_gradient_constraint=1, use_prefix_tune_for_e_prompt=True, use_prefix_tune_for_g_prompt=True, use_prompt_mask=True, warmup_epochs=5, warmup_lr=1e-06, weight_decay=0.0, world_size=4)
+number of params: 1098440
+Start training for 50 epochs
+args.config:  imr_dualprompt
+>>> pretrained data exists
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+layer 0 item key r 235
+----------------------------------------
+Gradient Constraints Summary (768, 235)
+----------------------------------------
+layer 1 item key r 150
+----------------------------------------
+Gradient Constraints Summary (768, 150)
+----------------------------------------
+layer 2 item key r 114
+----------------------------------------
+Gradient Constraints Summary (768, 114)
+----------------------------------------
+layer 3 item key r 59
+----------------------------------------
+Gradient Constraints Summary (768, 59)
+----------------------------------------
+layer 4 item key r 31
+----------------------------------------
+Gradient Constraints Summary (768, 31)
+----------------------------------------
+layer 5 item key r 44
+----------------------------------------
+Gradient Constraints Summary (768, 44)
+----------------------------------------
+layer 6 item key r 45
+----------------------------------------
+Gradient Constraints Summary (768, 45)
+----------------------------------------
+layer 7 item key r 45
+----------------------------------------
+Gradient Constraints Summary (768, 45)
+----------------------------------------
+layer 8 item key r 45
+----------------------------------------
+Gradient Constraints Summary (768, 45)
+----------------------------------------
+layer 9 item key r 45
+----------------------------------------
+Gradient Constraints Summary (768, 45)
+----------------------------------------
+layer 10 item key r 45
+----------------------------------------
+Gradient Constraints Summary (768, 45)
+----------------------------------------
+layer 11 item key r 49
+----------------------------------------
+Gradient Constraints Summary (768, 49)
+----------------------------------------
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+e 5 key torch.Size([768, 768])
+item key
+e 6 key torch.Size([768, 768])
+item key
+e 7 key torch.Size([768, 768])
+item key
+e 8 key torch.Size([768, 768])
+item key
+e 9 key torch.Size([768, 768])
+item key
+e 10 key torch.Size([768, 768])
+item key
+e 11 key torch.Size([768, 768])
+item key
+>>> processing on task: 0
+----------------def modify_available_list----------------
+>>> before modify: {}
+>>> : task0
+>>> after modify: {0: 0}
+----------------def modify_available_list----------------
+>>> : task0, no need to re-init params
+>>> : task0, no need to re-init keys
+* Acc@task 99.730 Acc@1 70.889 Acc@5 92.183 loss 1.842
+[Average accuracy till task1]	Acc@task: 99.7305	Acc@1: 70.8895	Acc@5: 92.1833	Loss: 1.8424
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/dualprompt/baseline/imr_dualprompt/test_51170/array_log.txt
+>>> processing on task: 1
+----------------def modify_available_list----------------
+>>> before modify: {0: 0}
+>>> : task1
+>>> after modify: {0: 0, 1: 1}
+----------------def modify_available_list----------------
+>>> : task1, no need to re-init params
+>>> : task1, no need to re-init keys
+* Acc@task 54.987 Acc@1 65.768 Acc@5 88.679 loss 1.831
+* Acc@task 77.208 Acc@1 74.644 Acc@5 90.883 loss 1.563
+[Average accuracy till task2]	Acc@task: 66.0973	Acc@1: 70.2060	Acc@5: 89.7812	Loss: 1.6967	Forgetting: 5.1213	Backward: -5.1213
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/dualprompt/baseline/imr_dualprompt/test_51170/array_log.txt
+>>> processing on task: 2
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1}
+>>> : task2
+>>> after modify: {0: 0, 1: 1, 2: 2}
+----------------def modify_available_list----------------
+>>> : task2, no need to re-init params
+>>> : task2, no need to re-init keys
+* Acc@task 54.987 Acc@1 67.385 Acc@5 87.332 loss 1.833
+* Acc@task 72.650 Acc@1 75.783 Acc@5 90.883 loss 1.571
+* Acc@task 71.359 Acc@1 68.932 Acc@5 90.291 loss 1.625
+[Average accuracy till task3]	Acc@task: 66.3318	Acc@1: 70.7003	Acc@5: 89.5020	Loss: 1.6762	Forgetting: 1.7520	Backward: -1.1822
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/dualprompt/baseline/imr_dualprompt/test_51170/array_log.txt
+>>> processing on task: 3
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2}
+>>> : task3
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3}
+----------------def modify_available_list----------------
+>>> : task3, no need to re-init params
+>>> : task3, no need to re-init keys
+* Acc@task 54.447 Acc@1 66.038 Acc@5 84.097 loss 1.873
+* Acc@task 66.667 Acc@1 74.074 Acc@5 89.174 loss 1.575
+* Acc@task 58.738 Acc@1 68.932 Acc@5 89.806 loss 1.559
+* Acc@task 56.193 Acc@1 67.674 Acc@5 87.613 loss 1.636
+[Average accuracy till task4]	Acc@task: 59.0113	Acc@1: 69.1794	Acc@5: 87.6725	Loss: 1.6609	Forgetting: 2.1871	Backward: -1.8072
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/dualprompt/baseline/imr_dualprompt/test_51170/array_log.txt
+>>> processing on task: 4
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3}
+>>> : task4
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4}
+----------------def modify_available_list----------------
+>>> : task4, no need to re-init params
+>>> : task4, no need to re-init keys
+* Acc@task 49.596 Acc@1 62.264 Acc@5 82.210 loss 1.930
+* Acc@task 52.707 Acc@1 71.225 Acc@5 86.325 loss 1.591
+* Acc@task 58.738 Acc@1 66.019 Acc@5 88.350 loss 1.607
+* Acc@task 53.172 Acc@1 66.163 Acc@5 86.405 loss 1.681
+* Acc@task 56.438 Acc@1 67.123 Acc@5 87.123 loss 1.650
+[Average accuracy till task5]	Acc@task: 54.1301	Acc@1: 66.5590	Acc@5: 86.0825	Loss: 1.6919	Forgetting: 4.4017	Backward: -4.1168
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/dualprompt/baseline/imr_dualprompt/test_51170/array_log.txt
+>>> processing on task: 5
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4}
+>>> : task5
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+----------------def modify_available_list----------------
+>>> : task5, no need to re-init params
+>>> : task5, no need to re-init keys
+* Acc@task 48.248 Acc@1 61.725 Acc@5 79.784 loss 1.994
+* Acc@task 49.858 Acc@1 72.080 Acc@5 86.040 loss 1.605
+* Acc@task 58.252 Acc@1 65.049 Acc@5 88.350 loss 1.632
+* Acc@task 46.224 Acc@1 66.767 Acc@5 86.405 loss 1.685
+* Acc@task 52.877 Acc@1 69.315 Acc@5 87.123 loss 1.656
+* Acc@task 42.193 Acc@1 68.106 Acc@5 85.714 loss 1.736
+[Average accuracy till task6]	Acc@task: 49.6085	Acc@1: 67.1737	Acc@5: 85.5694	Loss: 1.7180	Forgetting: 3.5316	Backward: -2.8653
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/dualprompt/baseline/imr_dualprompt/test_51170/array_log.txt
+>>> processing on task: 6
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+>>> : task6
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6}
+----------------def modify_available_list----------------
+>>> : task6, no need to re-init params
+>>> : task6, no need to re-init keys
+* Acc@task 47.978 Acc@1 62.534 Acc@5 78.976 loss 1.977
+* Acc@task 48.433 Acc@1 69.801 Acc@5 86.325 loss 1.610
+* Acc@task 58.252 Acc@1 66.019 Acc@5 87.864 loss 1.634
+* Acc@task 45.619 Acc@1 64.048 Acc@5 84.290 loss 1.726
+* Acc@task 49.863 Acc@1 66.849 Acc@5 86.027 loss 1.691
+* Acc@task 32.558 Acc@1 65.116 Acc@5 86.047 loss 1.728
+* Acc@task 55.556 Acc@1 67.677 Acc@5 82.492 loss 1.845
+[Average accuracy till task7]	Acc@task: 48.3229	Acc@1: 66.0063	Acc@5: 84.5743	Loss: 1.7444	Forgetting: 4.3887	Backward: -3.8335
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/dualprompt/baseline/imr_dualprompt/test_51170/array_log.txt
+>>> processing on task: 7
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6}
+>>> : task7
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}
+----------------def modify_available_list----------------
+>>> : task7, no need to re-init params
+>>> : task7, no need to re-init keys
+* Acc@task 47.439 Acc@1 61.456 Acc@5 78.706 loss 1.989
+* Acc@task 47.863 Acc@1 69.801 Acc@5 85.755 loss 1.621
+* Acc@task 58.252 Acc@1 66.990 Acc@5 86.893 loss 1.639
+* Acc@task 45.619 Acc@1 63.142 Acc@5 84.894 loss 1.759
+* Acc@task 49.589 Acc@1 66.575 Acc@5 85.753 loss 1.706
+* Acc@task 30.233 Acc@1 66.113 Acc@5 84.385 loss 1.735
+* Acc@task 49.832 Acc@1 64.983 Acc@5 81.818 loss 1.838
+* Acc@task 27.273 Acc@1 59.470 Acc@5 78.788 loss 2.088
+[Average accuracy till task8]	Acc@task: 44.5125	Acc@1: 64.8162	Acc@5: 83.3742	Loss: 1.7969	Forgetting: 4.1881	Backward: -3.7122
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/dualprompt/baseline/imr_dualprompt/test_51170/array_log.txt
+>>> processing on task: 8
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7}
+>>> : task8
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8}
+----------------def modify_available_list----------------
+>>> : task8, no need to re-init params
+>>> : task8, no need to re-init keys
+* Acc@task 47.170 Acc@1 60.108 Acc@5 77.628 loss 2.009
+* Acc@task 47.578 Acc@1 69.231 Acc@5 85.755 loss 1.627
+* Acc@task 58.252 Acc@1 66.990 Acc@5 86.408 loss 1.660
+* Acc@task 45.619 Acc@1 61.329 Acc@5 83.384 loss 1.783
+* Acc@task 47.671 Acc@1 63.836 Acc@5 83.562 loss 1.768
+* Acc@task 25.581 Acc@1 62.791 Acc@5 83.389 loss 1.772
+* Acc@task 39.057 Acc@1 62.290 Acc@5 80.808 loss 1.879
+* Acc@task 18.939 Acc@1 55.682 Acc@5 78.030 loss 2.131
+* Acc@task 52.632 Acc@1 76.974 Acc@5 87.500 loss 1.366
+[Average accuracy till task9]	Acc@task: 42.5001	Acc@1: 64.3588	Acc@5: 82.9404	Loss: 1.7773	Forgetting: 5.6988	Backward: -5.2824
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/dualprompt/baseline/imr_dualprompt/test_51170/array_log.txt
+>>> processing on task: 9
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8}
+>>> : task9
+>>> after modify: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9}
+----------------def modify_available_list----------------
+>>> : task9, no need to re-init params
+>>> : task9, no need to re-init keys
+* Acc@task 45.283 Acc@1 60.377 Acc@5 78.437 loss 2.028
+* Acc@task 41.880 Acc@1 67.521 Acc@5 84.046 loss 1.636
+* Acc@task 57.767 Acc@1 63.107 Acc@5 85.437 loss 1.695
+* Acc@task 44.713 Acc@1 61.027 Acc@5 79.154 loss 1.825
+* Acc@task 37.808 Acc@1 62.466 Acc@5 84.384 loss 1.787
+* Acc@task 23.920 Acc@1 62.126 Acc@5 84.385 loss 1.773
+* Acc@task 30.640 Acc@1 60.269 Acc@5 78.114 loss 1.968
+* Acc@task 18.939 Acc@1 54.545 Acc@5 75.379 loss 2.199
+* Acc@task 48.355 Acc@1 75.658 Acc@5 86.513 loss 1.410
+* Acc@task 61.190 Acc@1 69.286 Acc@5 84.524 loss 1.686
+[Average accuracy till task10]	Acc@task: 41.0497	Acc@1: 63.6383	Acc@5: 82.0372	Loss: 1.8008	Forgetting: 6.4136	Backward: -6.0435
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/dualprompt/baseline/imr_dualprompt/test_51170/array_log.txt
+Total training time: 1:25:10

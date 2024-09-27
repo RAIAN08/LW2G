@@ -1,0 +1,647 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+100
+[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], [20, 21, 22, 23, 24, 25, 26, 27, 28, 29], [30, 31, 32, 33, 34, 35, 36, 37, 38, 39], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [50, 51, 52, 53, 54, 55, 56, 57, 58, 59], [60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [70, 71, 72, 73, 74, 75, 76, 77, 78, 79], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89], [90, 91, 92, 93, 94, 95, 96, 97, 98, 99]]
+Creating original model: vit_base_patch16_224
+[Sequential(
+  (0): Linear(in_features=768, out_features=1536, bias=True)
+  (1): GELU(approximate='none')
+  (2): Dropout(p=0.0, inplace=False)
+), Sequential(
+  (0): Linear(in_features=1536, out_features=768, bias=True)
+  (1): Dropout(p=0.0, inplace=False)
+)]
+Creating model: vit_base_patch16_224
+Namespace(aa=None, angle_epsilon=0.18, batch_size=24, batchwise_prompt=False, ca_epochs=30, ca_lr=0.005, ca_storage_efficient_method='multi-centroid', clip_grad=1.0, color_jitter=None, config='cifar100_hideprompt_5e', cooldown_epochs=10, crct_epochs=30, data_path='./datasets/', dataset='Split-CIFAR100', dataset_name='cifar100', decay_epochs=30, decay_rate=0.1, device='cuda', dist_url='env://', distributed=False, drop=0.0, drop_path=0.0, e_prompt_layer_idx=[0, 1, 2, 3, 4], embedding_key='cls', epochs=50, eval=False, freeze=['blocks', 'patch_embed', 'cls_token', 'norm', 'pos_embed'], g_prompt_layer_idx=[], g_prompt_length=5, global_pool='token', head_type='token', initializer='uniform', input_size=224, larger_prompt_lr=True, length=5, lr=0.03, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, mask_first_epoch=False, milestones=[10], min_lr=1e-05, model='vit_base_patch16_224', model_num=0, momentum=0.9, n_centroids=10, nb_classes=100, no_auto=0, not_train_ca=False, num_tasks=10, num_workers=4, opt='adam', opt_betas=(0.9, 0.999), opt_eps=1e-08, original_model='vit_base_patch16_224', original_model_mlp_structure=[2], output_dir='./typical_setting/cifar_B_0_INC_10/hideprompt/all_05/cifar100_hideprompt_5e/test_85228', patience_epochs=10, pin_mem=True, predefined_key='', pretrained=True, print_freq=10, prompt_key=False, prompt_key_init='uniform', prompt_momentum=0.01, prompt_pool=True, pull_constraint=True, pull_constraint_coeff=1.0, recount=1, reg=0.1, reinit_optimizer=True, remode='pixel', reprob=0.0, same_key_value=False, sched='step', seed=42, shared_prompt_key=False, shared_prompt_pool=True, shuffle=False, size=10, smoothing=0.1, subparser_name='cifar100_hideprompt_5e', task_inc=False, threshold=0.99, threshold2=0.5, threshold_pretrained=0.99, top_k=1, topk_old_subspace=3, train_inference_task_only=False, train_interpolation='bicubic', train_mask=True, trained_original_model='./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279', unscale_lr=True, use_e_prompt=True, use_g_prompt=False, use_old_subspace_forward=1, use_pre_gradient_constraint=1, use_prefix_tune_for_e_prompt=True, use_prefix_tune_for_g_prompt=False, use_prompt_mask=True, warmup_epochs=0, warmup_lr=1e-06, weight_decay=0.0, world_size=1)
+number of params: 460900
+Start training for 50 epochs
+args.config:  cifar100_hideprompt_5e
+>>> pretrained data exists
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+layer 0 item key r 172
+----------------------------------------
+Gradient Constraints Summary (768, 172)
+----------------------------------------
+layer 1 item key r 371
+----------------------------------------
+Gradient Constraints Summary (768, 371)
+----------------------------------------
+layer 2 item key r 486
+----------------------------------------
+Gradient Constraints Summary (768, 486)
+----------------------------------------
+layer 3 item key r 580
+----------------------------------------
+Gradient Constraints Summary (768, 580)
+----------------------------------------
+layer 4 item key r 177
+----------------------------------------
+Gradient Constraints Summary (768, 177)
+----------------------------------------
+layer 5 item key r 125
+----------------------------------------
+Gradient Constraints Summary (768, 125)
+----------------------------------------
+layer 6 item key r 125
+----------------------------------------
+Gradient Constraints Summary (768, 125)
+----------------------------------------
+layer 7 item key r 125
+----------------------------------------
+Gradient Constraints Summary (768, 125)
+----------------------------------------
+layer 8 item key r 125
+----------------------------------------
+Gradient Constraints Summary (768, 125)
+----------------------------------------
+layer 9 item key r 126
+----------------------------------------
+Gradient Constraints Summary (768, 126)
+----------------------------------------
+layer 10 item key r 130
+----------------------------------------
+Gradient Constraints Summary (768, 130)
+----------------------------------------
+layer 11 item key r 145
+----------------------------------------
+Gradient Constraints Summary (768, 145)
+----------------------------------------
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+e 5 key torch.Size([768, 768])
+item key
+e 6 key torch.Size([768, 768])
+item key
+e 7 key torch.Size([768, 768])
+item key
+e 8 key torch.Size([768, 768])
+item key
+e 9 key torch.Size([768, 768])
+item key
+e 10 key torch.Size([768, 768])
+item key
+e 11 key torch.Size([768, 768])
+item key
+>>> processing on task: 0
+----------------def modify_available_list----------------
+>>> before modify: {}
+>>> : task0
+>>> after modify: {0: 0}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task1_checkpoint.pth
+>>> : task0, no need to re-init params
+>>> : need to build memory
+get_prefix_matrix use: 105.06173062324524
+layer 0 item key r 25
+----------------------------------------
+Gradient Constraints Summary (768, 25)
+----------------------------------------
+layer 1 item key r 43
+----------------------------------------
+Gradient Constraints Summary (768, 43)
+----------------------------------------
+layer 2 item key r 47
+----------------------------------------
+Gradient Constraints Summary (768, 47)
+----------------------------------------
+layer 3 item key r 47
+----------------------------------------
+Gradient Constraints Summary (768, 47)
+----------------------------------------
+layer 4 item key r 47
+----------------------------------------
+Gradient Constraints Summary (768, 47)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 100.000 Acc@1 99.500 Acc@5 100.000 loss 0.120
+[Average accuracy till task1]	Acc@task: 100.0000	Acc@1: 99.5000	Acc@5: 100.0000	Loss: 0.1204
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/all_05/cifar100_hideprompt_5e/test_85228/array_log.txt
+>>> processing on task: 1
+args.config:  cifar100_hideprompt_5e
+>>> angle list pre: {0: 46.962421257444575}
+>>> angle list all: {0: 76.68784405888567}
+>>> angle_epsilon:  46.962421257444575
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 0 >>> max_value 76.68784405888567
+>>> min_key: 0 >>> min_value 76.68784405888567
+>>> done!===========================================================================
+>>> top_k_keys:  [0]
+----------------def modify_available_list----------------
+>>> before modify: {0: 0}
+>>> : task1
+>>> after modify: {0: 1, 1: 1}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task2_checkpoint.pth
+>>> : task1, re-init params with task0
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 135.84165620803833
+----------------------------------------
+Gradient Constraints Summary (768, 58)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 88)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 95)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 95)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 95)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 100.000 Acc@1 97.700 Acc@5 100.000 loss 0.178
+* Acc@task 100.000 Acc@1 94.800 Acc@5 99.800 loss 0.344
+[Average accuracy till task2]	Acc@task: 100.0000	Acc@1: 96.2500	Acc@5: 99.9000	Loss: 0.2609	Forgetting: 1.8000	Backward: -1.8000
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/all_05/cifar100_hideprompt_5e/test_85228/array_log.txt
+>>> processing on task: 2
+args.config:  cifar100_hideprompt_5e
+>>> angle list pre: {1: 48.114241917627666}
+>>> angle list all: {1: 70.5600648800035}
+>>> angle_epsilon:  48.114241917627666
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 1 >>> max_value 70.5600648800035
+>>> min_key: 1 >>> min_value 70.5600648800035
+>>> done!===========================================================================
+>>> top_k_keys:  [1]
+----------------def modify_available_list----------------
+>>> before modify: {0: 1, 1: 1}
+>>> : task2
+>>> after modify: {0: 2, 1: 2, 2: 2}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task3_checkpoint.pth
+>>> : task2, re-init params with task1
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 48.414581537246704
+----------------------------------------
+Gradient Constraints Summary (768, 80)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 129)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 142)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 142)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 143)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 100.000 Acc@1 96.700 Acc@5 100.000 loss 0.210
+* Acc@task 100.000 Acc@1 93.000 Acc@5 99.400 loss 0.351
+* Acc@task 100.000 Acc@1 92.200 Acc@5 99.500 loss 0.349
+[Average accuracy till task3]	Acc@task: 100.0000	Acc@1: 93.9667	Acc@5: 99.6333	Loss: 0.3032	Forgetting: 2.3000	Backward: -2.3000
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/all_05/cifar100_hideprompt_5e/test_85228/array_log.txt
+>>> processing on task: 3
+args.config:  cifar100_hideprompt_5e
+>>> angle list pre: {2: 48.45425568257704}
+>>> angle list all: {2: 66.06939701875345}
+>>> angle_epsilon:  48.45425568257704
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 2 >>> max_value 66.06939701875345
+>>> min_key: 2 >>> min_value 66.06939701875345
+>>> done!===========================================================================
+>>> top_k_keys:  [2]
+----------------def modify_available_list----------------
+>>> before modify: {0: 2, 1: 2, 2: 2}
+>>> : task3
+>>> after modify: {0: 3, 1: 3, 2: 3, 3: 3}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task4_checkpoint.pth
+>>> : task3, re-init params with task2
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 48.92578172683716
+----------------------------------------
+Gradient Constraints Summary (768, 108)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 173)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 190)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 189)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 191)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 100.000 Acc@1 95.600 Acc@5 99.900 loss 0.230
+* Acc@task 100.000 Acc@1 90.700 Acc@5 99.400 loss 0.397
+* Acc@task 100.000 Acc@1 91.900 Acc@5 99.200 loss 0.355
+* Acc@task 100.000 Acc@1 92.000 Acc@5 99.000 loss 0.359
+[Average accuracy till task4]	Acc@task: 100.0000	Acc@1: 92.5500	Acc@5: 99.3750	Loss: 0.3352	Forgetting: 2.7667	Backward: -2.7667
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/all_05/cifar100_hideprompt_5e/test_85228/array_log.txt
+>>> processing on task: 4
+args.config:  cifar100_hideprompt_5e
+>>> angle list pre: {3: 47.792447472573095}
+>>> angle list all: {3: 61.964077141858276}
+>>> angle_epsilon:  47.792447472573095
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 3 >>> max_value 61.964077141858276
+>>> min_key: 3 >>> min_value 61.964077141858276
+>>> done!===========================================================================
+>>> top_k_keys:  [3]
+----------------def modify_available_list----------------
+>>> before modify: {0: 3, 1: 3, 2: 3, 3: 3}
+>>> : task4
+>>> after modify: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task5_checkpoint.pth
+>>> : task4, re-init params with task3
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 46.40766477584839
+----------------------------------------
+Gradient Constraints Summary (768, 132)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 214)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 236)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 236)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 238)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 100.000 Acc@1 94.700 Acc@5 99.900 loss 0.246
+* Acc@task 100.000 Acc@1 89.600 Acc@5 99.100 loss 0.417
+* Acc@task 100.000 Acc@1 90.100 Acc@5 99.000 loss 0.396
+* Acc@task 100.000 Acc@1 90.700 Acc@5 98.800 loss 0.377
+* Acc@task 100.000 Acc@1 91.000 Acc@5 99.200 loss 0.383
+[Average accuracy till task5]	Acc@task: 100.0000	Acc@1: 91.2200	Acc@5: 99.2000	Loss: 0.3637	Forgetting: 3.3500	Backward: -3.3500
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/all_05/cifar100_hideprompt_5e/test_85228/array_log.txt
+>>> processing on task: 5
+args.config:  cifar100_hideprompt_5e
+>>> angle list pre: {4: 47.17121704641099}
+>>> angle list all: {4: 58.52629877065718}
+>>> angle_epsilon:  47.17121704641099
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 4 >>> max_value 58.52629877065718
+>>> min_key: 4 >>> min_value 58.52629877065718
+>>> done!===========================================================================
+>>> top_k_keys:  [4]
+----------------def modify_available_list----------------
+>>> before modify: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4}
+>>> : task5
+>>> after modify: {0: 5, 1: 5, 2: 5, 3: 5, 4: 5, 5: 5}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task6_checkpoint.pth
+>>> : task5, re-init params with task4
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 45.6185040473938
+----------------------------------------
+Gradient Constraints Summary (768, 153)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 254)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 282)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 282)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 285)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 100.000 Acc@1 93.600 Acc@5 99.700 loss 0.259
+* Acc@task 100.000 Acc@1 89.100 Acc@5 98.900 loss 0.422
+* Acc@task 100.000 Acc@1 90.200 Acc@5 98.800 loss 0.398
+* Acc@task 100.000 Acc@1 89.200 Acc@5 98.300 loss 0.409
+* Acc@task 100.000 Acc@1 88.200 Acc@5 99.100 loss 0.437
+* Acc@task 100.000 Acc@1 91.200 Acc@5 99.200 loss 0.370
+[Average accuracy till task6]	Acc@task: 100.0000	Acc@1: 90.2500	Acc@5: 99.0000	Loss: 0.3823	Forgetting: 3.8400	Backward: -3.8400
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/all_05/cifar100_hideprompt_5e/test_85228/array_log.txt
+>>> processing on task: 6
+args.config:  cifar100_hideprompt_5e
+>>> angle list pre: {5: 47.78008807926812}
+>>> angle list all: {5: 55.28503876358133}
+>>> angle_epsilon:  47.78008807926812
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 5 >>> max_value 55.28503876358133
+>>> min_key: 5 >>> min_value 55.28503876358133
+>>> done!===========================================================================
+>>> top_k_keys:  [5]
+----------------def modify_available_list----------------
+>>> before modify: {0: 5, 1: 5, 2: 5, 3: 5, 4: 5, 5: 5}
+>>> : task6
+>>> after modify: {0: 6, 1: 6, 2: 6, 3: 6, 4: 6, 5: 6, 6: 6}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task7_checkpoint.pth
+>>> : task6, re-init params with task5
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 46.773205041885376
+----------------------------------------
+Gradient Constraints Summary (768, 171)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 292)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 327)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 327)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 331)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 100.000 Acc@1 93.000 Acc@5 99.500 loss 0.264
+* Acc@task 100.000 Acc@1 87.500 Acc@5 98.500 loss 0.446
+* Acc@task 100.000 Acc@1 89.200 Acc@5 97.900 loss 0.419
+* Acc@task 100.000 Acc@1 88.100 Acc@5 97.900 loss 0.427
+* Acc@task 100.000 Acc@1 88.200 Acc@5 98.900 loss 0.438
+* Acc@task 100.000 Acc@1 90.600 Acc@5 98.900 loss 0.367
+* Acc@task 100.000 Acc@1 87.700 Acc@5 97.800 loss 0.442
+[Average accuracy till task7]	Acc@task: 100.0000	Acc@1: 89.1857	Acc@5: 98.4857	Loss: 0.4004	Forgetting: 4.0167	Backward: -4.0167
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/all_05/cifar100_hideprompt_5e/test_85228/array_log.txt
+>>> processing on task: 7
+args.config:  cifar100_hideprompt_5e
+>>> angle list pre: {6: 48.21390122410657}
+>>> angle list all: {6: 52.36374533427004}
+>>> angle_epsilon:  48.21390122410657
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 6 >>> max_value 52.36374533427004
+>>> min_key: 6 >>> min_value 52.36374533427004
+>>> done!===========================================================================
+>>> top_k_keys:  [6]
+----------------def modify_available_list----------------
+>>> before modify: {0: 6, 1: 6, 2: 6, 3: 6, 4: 6, 5: 6, 6: 6}
+>>> : task7
+>>> after modify: {0: 7, 1: 7, 2: 7, 3: 7, 4: 7, 5: 7, 6: 7, 7: 7}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task8_checkpoint.pth
+>>> : task7, re-init params with task6
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 45.394099950790405
+----------------------------------------
+Gradient Constraints Summary (768, 188)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 329)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 372)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 372)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 377)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 100.000 Acc@1 92.800 Acc@5 99.500 loss 0.274
+* Acc@task 100.000 Acc@1 87.400 Acc@5 98.000 loss 0.450
+* Acc@task 100.000 Acc@1 88.100 Acc@5 97.800 loss 0.448
+* Acc@task 100.000 Acc@1 87.300 Acc@5 97.900 loss 0.437
+* Acc@task 100.000 Acc@1 87.600 Acc@5 98.900 loss 0.445
+* Acc@task 100.000 Acc@1 89.400 Acc@5 98.600 loss 0.406
+* Acc@task 100.000 Acc@1 86.900 Acc@5 97.300 loss 0.468
+* Acc@task 100.000 Acc@1 88.300 Acc@5 98.600 loss 0.418
+[Average accuracy till task8]	Acc@task: 100.0000	Acc@1: 88.4750	Acc@5: 98.3250	Loss: 0.4182	Forgetting: 4.1286	Backward: -4.1286
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/all_05/cifar100_hideprompt_5e/test_85228/array_log.txt
+>>> processing on task: 8
+args.config:  cifar100_hideprompt_5e
+>>> angle list pre: {7: 47.41858851082434}
+>>> angle list all: {7: 49.55314738979104}
+>>> angle_epsilon:  47.41858851082434
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 7 >>> max_value 49.55314738979104
+>>> min_key: 7 >>> min_value 49.55314738979104
+>>> done!===========================================================================
+>>> top_k_keys:  [7]
+----------------def modify_available_list----------------
+>>> before modify: {0: 7, 1: 7, 2: 7, 3: 7, 4: 7, 5: 7, 6: 7, 7: 7}
+>>> : task8
+>>> after modify: {0: 8, 1: 8, 2: 8, 3: 8, 4: 8, 5: 8, 6: 8, 7: 8, 8: 8}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task9_checkpoint.pth
+>>> : task8, re-init params with task7
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 46.92830991744995
+----------------------------------------
+Gradient Constraints Summary (768, 215)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 369)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 417)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 417)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 423)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 100.000 Acc@1 92.600 Acc@5 99.500 loss 0.277
+* Acc@task 100.000 Acc@1 86.400 Acc@5 97.800 loss 0.477
+* Acc@task 100.000 Acc@1 87.900 Acc@5 97.600 loss 0.465
+* Acc@task 100.000 Acc@1 86.600 Acc@5 97.600 loss 0.452
+* Acc@task 100.000 Acc@1 87.000 Acc@5 98.700 loss 0.466
+* Acc@task 100.000 Acc@1 89.200 Acc@5 98.400 loss 0.413
+* Acc@task 100.000 Acc@1 86.800 Acc@5 96.800 loss 0.476
+* Acc@task 100.000 Acc@1 88.400 Acc@5 98.400 loss 0.396
+* Acc@task 100.000 Acc@1 93.000 Acc@5 99.300 loss 0.290
+[Average accuracy till task9]	Acc@task: 100.0000	Acc@1: 88.6556	Acc@5: 98.2333	Loss: 0.4124	Forgetting: 3.9875	Backward: -3.9750
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/all_05/cifar100_hideprompt_5e/test_85228/array_log.txt
+>>> processing on task: 9
+args.config:  cifar100_hideprompt_5e
+>>> angle list pre: {8: 48.218037282279326}
+>>> angle list all: {8: 46.577782113467016}
+>>> angle_epsilon:  48.218037282279326
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 8 >>> max_value 46.577782113467016
+>>> min_key: 8 >>> min_value 46.577782113467016
+>>> done!===========================================================================
+>>> top_k_keys:  [8]
+----------------def modify_available_list----------------
+>>> before modify: {0: 8, 1: 8, 2: 8, 3: 8, 4: 8, 5: 8, 6: 8, 7: 8, 8: 8}
+>>> : task9
+>>> after modify: {0: 8, 1: 8, 2: 8, 3: 8, 4: 8, 5: 8, 6: 8, 7: 8, 8: 8, 9: 9}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/cifar/cifar_b_0_inc_10/cifar100_hideprompt_5e/test_20279/checkpoint/task10_checkpoint.pth
+>>> : task9, no need to re-init params
+torch.Size([5, 2, 5, 12, 64])
+torch.Size([5, 2, 1, 5, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 44.11665487289429
+layer 0 item key r 24
+----------------------------------------
+Gradient Constraints Summary (768, 24)
+----------------------------------------
+layer 1 item key r 42
+----------------------------------------
+Gradient Constraints Summary (768, 42)
+----------------------------------------
+layer 2 item key r 47
+----------------------------------------
+Gradient Constraints Summary (768, 47)
+----------------------------------------
+layer 3 item key r 47
+----------------------------------------
+Gradient Constraints Summary (768, 47)
+----------------------------------------
+layer 4 item key r 47
+----------------------------------------
+Gradient Constraints Summary (768, 47)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 98.700 Acc@1 92.000 Acc@5 99.300 loss 0.297
+* Acc@task 97.300 Acc@1 85.800 Acc@5 97.600 loss 0.492
+* Acc@task 98.400 Acc@1 87.500 Acc@5 97.200 loss 0.473
+* Acc@task 96.700 Acc@1 85.300 Acc@5 97.500 loss 0.505
+* Acc@task 96.700 Acc@1 85.400 Acc@5 98.500 loss 0.511
+* Acc@task 97.000 Acc@1 88.100 Acc@5 98.300 loss 0.433
+* Acc@task 97.200 Acc@1 86.600 Acc@5 96.700 loss 0.483
+* Acc@task 96.700 Acc@1 87.700 Acc@5 98.200 loss 0.440
+* Acc@task 97.400 Acc@1 91.900 Acc@5 99.000 loss 0.300
+* Acc@task 77.800 Acc@1 84.900 Acc@5 97.900 loss 0.510
+[Average accuracy till task10]	Acc@task: 95.3900	Acc@1: 87.5200	Acc@5: 98.0200	Loss: 0.4443	Forgetting: 4.3889	Backward: -4.3778
+NumPy array :stat_matrix saved to ./typical_setting/cifar_B_0_INC_10/hideprompt/all_05/cifar100_hideprompt_5e/test_85228/array_log.txt
+Total training time: 6:24:45

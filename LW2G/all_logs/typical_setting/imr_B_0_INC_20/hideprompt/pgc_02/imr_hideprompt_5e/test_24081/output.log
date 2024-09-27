@@ -1,0 +1,667 @@
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+Downloading from https://people.eecs.berkeley.edu/~hendrycks/imagenet-r.tar
+Using downloaded and verified file: ./datasets/imagenet-r.tar
+200
+[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59], [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99], [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139], [140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159], [160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179], [180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199]]
+Creating original model: vit_base_patch16_224
+[Sequential(
+  (0): Linear(in_features=768, out_features=1536, bias=True)
+  (1): GELU(approximate='none')
+  (2): Dropout(p=0.0, inplace=False)
+), Sequential(
+  (0): Linear(in_features=1536, out_features=768, bias=True)
+  (1): Dropout(p=0.0, inplace=False)
+)]
+Creating model: vit_base_patch16_224
+Namespace(aa=None, angle_epsilon=0.18, batch_size=24, batchwise_prompt=False, ca_lr=0.005, ca_storage_efficient_method='multi-centroid', clip_grad=1.0, color_jitter=None, config='imr_hideprompt_5e', cooldown_epochs=10, crct_epochs=30, data_path='./datasets/', dataset='Split-Imagenet-R', dataset_name='imr', decay_epochs=30, decay_rate=0.1, device='cuda', dist_url='env://', distributed=False, drop=0.0, drop_path=0.0, e_prompt_layer_idx=[0, 1, 2, 3, 4], embedding_key='cls', epochs=150, eval=False, freeze=['blocks', 'patch_embed', 'cls_token', 'norm', 'pos_embed'], g_prompt_layer_idx=[], g_prompt_length=5, global_pool='token', head_type='token', initializer='uniform', input_size=224, larger_prompt_lr=True, length=20, lr=0.03, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, mask_first_epoch=False, milestones=[10], min_lr=1e-05, model='vit_base_patch16_224', model_num=0, momentum=0.9, n_centroids=10, nb_classes=200, no_auto=0, not_train_ca=False, num_tasks=10, num_workers=4, opt='adam', opt_betas=(0.9, 0.999), opt_eps=1e-08, original_model='vit_base_patch16_224', original_model_mlp_structure=[2], output_dir='./typical_setting/imr_B_0_INC_20/hideprompt/pgc_02/imr_hideprompt_5e/test_24081', patience_epochs=10, pin_mem=True, predefined_key='', pretrained=True, print_freq=10, prompt_key=False, prompt_key_init='uniform', prompt_momentum=0.01, prompt_pool=True, pull_constraint=True, pull_constraint_coeff=1.0, recount=1, reg=0.5, reinit_optimizer=True, remode='pixel', reprob=0.0, same_key_value=False, sched='cosine', seed=42, shared_prompt_key=False, shared_prompt_pool=True, shuffle=False, size=10, smoothing=0.1, subparser_name='imr_hideprompt_5e', task_inc=False, threshold=0.9, threshold2=0.2, threshold_pretrained=0.9, top_k=1, topk_old_subspace=3, train_inference_task_only=False, train_interpolation='bicubic', train_mask=True, trained_original_model='./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505', unscale_lr=True, use_e_prompt=True, use_g_prompt=False, use_old_subspace_forward=1, use_pre_gradient_constraint=1, use_prefix_tune_for_e_prompt=True, use_prefix_tune_for_g_prompt=False, use_prompt_mask=True, warmup_epochs=0, warmup_lr=1e-06, weight_decay=0.0, world_size=1)
+number of params: 1689800
+Start training for 150 epochs
+args.config:  imr_hideprompt_5e
+>>> pretrained data exists
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+layer 0 item key r 75
+----------------------------------------
+Gradient Constraints Summary (768, 75)
+----------------------------------------
+layer 1 item key r 40
+----------------------------------------
+Gradient Constraints Summary (768, 40)
+----------------------------------------
+layer 2 item key r 29
+----------------------------------------
+Gradient Constraints Summary (768, 29)
+----------------------------------------
+layer 3 item key r 17
+----------------------------------------
+Gradient Constraints Summary (768, 17)
+----------------------------------------
+layer 4 item key r 16
+----------------------------------------
+Gradient Constraints Summary (768, 16)
+----------------------------------------
+layer 5 item key r 23
+----------------------------------------
+Gradient Constraints Summary (768, 23)
+----------------------------------------
+layer 6 item key r 23
+----------------------------------------
+Gradient Constraints Summary (768, 23)
+----------------------------------------
+layer 7 item key r 23
+----------------------------------------
+Gradient Constraints Summary (768, 23)
+----------------------------------------
+layer 8 item key r 23
+----------------------------------------
+Gradient Constraints Summary (768, 23)
+----------------------------------------
+layer 9 item key r 23
+----------------------------------------
+Gradient Constraints Summary (768, 23)
+----------------------------------------
+layer 10 item key r 23
+----------------------------------------
+Gradient Constraints Summary (768, 23)
+----------------------------------------
+layer 11 item key r 25
+----------------------------------------
+Gradient Constraints Summary (768, 25)
+----------------------------------------
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+e 5 key torch.Size([768, 768])
+item key
+e 6 key torch.Size([768, 768])
+item key
+e 7 key torch.Size([768, 768])
+item key
+e 8 key torch.Size([768, 768])
+item key
+e 9 key torch.Size([768, 768])
+item key
+e 10 key torch.Size([768, 768])
+item key
+e 11 key torch.Size([768, 768])
+item key
+>>> processing on task: 0
+----------------def modify_available_list----------------
+>>> before modify: {}
+>>> : task0
+>>> after modify: {0: 0}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task1_checkpoint.pth
+>>> : task0, no need to re-init params
+>>> : need to build memory
+get_prefix_matrix use: 222.3290684223175
+layer 0 item key r 6
+----------------------------------------
+Gradient Constraints Summary (768, 6)
+----------------------------------------
+layer 1 item key r 15
+----------------------------------------
+Gradient Constraints Summary (768, 15)
+----------------------------------------
+layer 2 item key r 27
+----------------------------------------
+Gradient Constraints Summary (768, 27)
+----------------------------------------
+layer 3 item key r 28
+----------------------------------------
+Gradient Constraints Summary (768, 28)
+----------------------------------------
+layer 4 item key r 24
+----------------------------------------
+Gradient Constraints Summary (768, 24)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 100.000 Acc@1 83.288 Acc@5 94.609 loss 1.146
+[Average accuracy till task1]	Acc@task: 100.0000	Acc@1: 83.2884	Acc@5: 94.6092	Loss: 1.1463
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/pgc_02/imr_hideprompt_5e/test_24081/array_log.txt
+>>> processing on task: 1
+args.config:  imr_hideprompt_5e
+>>> angle list pre: {0: 82.83296141465758}
+>>> angle list all: {0: 81.1912144441327}
+>>> angle_epsilon:  82.83296141465758
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 0 >>> max_value 81.1912144441327
+>>> min_key: 0 >>> min_value 81.1912144441327
+>>> done!===========================================================================
+>>> top_k_keys:  [0]
+----------------def modify_available_list----------------
+>>> before modify: {0: 0}
+>>> : task1
+>>> after modify: {0: 0, 1: 1}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task2_checkpoint.pth
+>>> : task1, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 64.14783978462219
+layer 0 item key r 7
+----------------------------------------
+Gradient Constraints Summary (768, 7)
+----------------------------------------
+layer 1 item key r 17
+----------------------------------------
+Gradient Constraints Summary (768, 17)
+----------------------------------------
+layer 2 item key r 28
+----------------------------------------
+Gradient Constraints Summary (768, 28)
+----------------------------------------
+layer 3 item key r 29
+----------------------------------------
+Gradient Constraints Summary (768, 29)
+----------------------------------------
+layer 4 item key r 25
+----------------------------------------
+Gradient Constraints Summary (768, 25)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 79.515 Acc@1 76.011 Acc@5 90.027 loss 1.318
+* Acc@task 82.051 Acc@1 80.627 Acc@5 93.447 loss 1.121
+[Average accuracy till task2]	Acc@task: 80.7831	Acc@1: 78.3188	Acc@5: 91.7371	Loss: 1.2195	Forgetting: 7.2776	Backward: -7.2776
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/pgc_02/imr_hideprompt_5e/test_24081/array_log.txt
+>>> processing on task: 2
+args.config:  imr_hideprompt_5e
+>>> angle list pre: {0: 82.78341207030503, 1: 81.97220177980248}
+>>> angle list all: {0: 81.17565221296904, 1: 80.76262826717947}
+>>> angle_epsilon:  81.97220177980248
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 0 >>> max_value 81.17565221296904
+>>> min_key: 1 >>> min_value 80.76262826717947
+>>> done!===========================================================================
+>>> top_k_keys:  [0, 1]
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1}
+>>> : task2
+>>> after modify: {0: 0, 1: 1, 2: 2}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task3_checkpoint.pth
+>>> : task2, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 48.29790997505188
+layer 0 item key r 9
+----------------------------------------
+Gradient Constraints Summary (768, 9)
+----------------------------------------
+layer 1 item key r 17
+----------------------------------------
+Gradient Constraints Summary (768, 17)
+----------------------------------------
+layer 2 item key r 26
+----------------------------------------
+Gradient Constraints Summary (768, 26)
+----------------------------------------
+layer 3 item key r 27
+----------------------------------------
+Gradient Constraints Summary (768, 27)
+----------------------------------------
+layer 4 item key r 24
+----------------------------------------
+Gradient Constraints Summary (768, 24)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 74.124 Acc@1 72.776 Acc@5 86.792 loss 1.405
+* Acc@task 79.772 Acc@1 77.208 Acc@5 92.308 loss 1.144
+* Acc@task 79.126 Acc@1 69.417 Acc@5 88.350 loss 1.396
+[Average accuracy till task3]	Acc@task: 77.6741	Acc@1: 73.1339	Acc@5: 89.1499	Loss: 1.3149	Forgetting: 6.9655	Backward: -6.9655
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/pgc_02/imr_hideprompt_5e/test_24081/array_log.txt
+>>> processing on task: 3
+args.config:  imr_hideprompt_5e
+>>> angle list pre: {0: 82.66057065567178, 1: 82.00402876662957, 2: 81.03622824851954}
+>>> angle list all: {0: 81.18070508372556, 1: 80.74478088541903, 2: 80.85638469404063}
+>>> angle_epsilon:  81.03622824851954
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 0 >>> max_value 81.18070508372556
+>>> min_key: 1 >>> min_value 80.74478088541903
+>>> done!===========================================================================
+>>> top_k_keys:  [0, 1, 2]
+----------------def modify_available_list----------------
+>>> before modify: {0: 0, 1: 1, 2: 2}
+>>> : task3
+>>> after modify: {0: 3, 1: 1, 2: 2, 3: 3}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task4_checkpoint.pth
+>>> : task3, re-init params with task0
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 50.68453812599182
+----------------------------------------
+Gradient Constraints Summary (768, 14)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 31)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 54)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 56)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 50)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 83.288 Acc@1 75.472 Acc@5 86.792 loss 1.276
+* Acc@task 74.359 Acc@1 73.789 Acc@5 89.459 loss 1.280
+* Acc@task 74.272 Acc@1 68.447 Acc@5 84.466 loss 1.492
+* Acc@task 80.967 Acc@1 71.299 Acc@5 92.145 loss 1.306
+[Average accuracy till task4]	Acc@task: 78.2215	Acc@1: 72.2516	Acc@5: 88.2155	Loss: 1.3382	Forgetting: 5.2084	Backward: -5.2084
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/pgc_02/imr_hideprompt_5e/test_24081/array_log.txt
+>>> processing on task: 4
+args.config:  imr_hideprompt_5e
+>>> angle list pre: {1: 81.88838072899713, 2: 80.93281177813206, 3: 82.76971567420624}
+>>> angle list all: {1: 80.76830372719523, 2: 80.89744749632203, 3: 77.05320498291637}
+>>> angle_epsilon:  82.76971567420624
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 2 >>> max_value 80.89744749632203
+>>> min_key: 3 >>> min_value 77.05320498291637
+>>> done!===========================================================================
+>>> top_k_keys:  [1, 2, 3]
+----------------def modify_available_list----------------
+>>> before modify: {0: 3, 1: 1, 2: 2, 3: 3}
+>>> : task4
+>>> after modify: {0: 3, 1: 1, 2: 2, 3: 3, 4: 4}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task5_checkpoint.pth
+>>> : task4, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 71.43148684501648
+layer 0 item key r 7
+----------------------------------------
+Gradient Constraints Summary (768, 7)
+----------------------------------------
+layer 1 item key r 17
+----------------------------------------
+Gradient Constraints Summary (768, 17)
+----------------------------------------
+layer 2 item key r 27
+----------------------------------------
+Gradient Constraints Summary (768, 27)
+----------------------------------------
+layer 3 item key r 27
+----------------------------------------
+Gradient Constraints Summary (768, 27)
+----------------------------------------
+layer 4 item key r 26
+----------------------------------------
+Gradient Constraints Summary (768, 26)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 73.315 Acc@1 71.429 Acc@5 84.906 loss 1.500
+* Acc@task 69.231 Acc@1 69.801 Acc@5 86.325 loss 1.376
+* Acc@task 71.359 Acc@1 68.447 Acc@5 82.524 loss 1.548
+* Acc@task 70.695 Acc@1 69.486 Acc@5 90.332 loss 1.275
+* Acc@task 71.507 Acc@1 68.767 Acc@5 86.301 loss 1.362
+[Average accuracy till task5]	Acc@task: 71.2214	Acc@1: 69.5859	Acc@5: 86.0777	Loss: 1.4123	Forgetting: 6.3674	Backward: -6.3674
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/pgc_02/imr_hideprompt_5e/test_24081/array_log.txt
+>>> processing on task: 5
+args.config:  imr_hideprompt_5e
+>>> angle list pre: {1: 81.986550706464, 2: 80.77513759138743, 3: 82.76130871286922, 4: 80.86898479135095}
+>>> angle list all: {1: 80.77299632702156, 2: 80.91065160104597, 3: 77.06349971142927, 4: 80.97017964061631}
+>>> angle_epsilon:  80.86898479135095
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 4 >>> max_value 80.97017964061631
+>>> min_key: 3 >>> min_value 77.06349971142927
+>>> done!===========================================================================
+>>> top_k_keys:  [1, 2, 3]
+----------------def modify_available_list----------------
+>>> before modify: {0: 3, 1: 1, 2: 2, 3: 3, 4: 4}
+>>> : task5
+>>> after modify: {0: 3, 1: 1, 2: 2, 3: 3, 4: 5, 5: 5}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task6_checkpoint.pth
+>>> : task5, re-init params with task4
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 46.681426763534546
+----------------------------------------
+Gradient Constraints Summary (768, 13)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 32)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 53)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 53)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 52)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 69.542 Acc@1 68.733 Acc@5 81.941 loss 1.574
+* Acc@task 64.387 Acc@1 67.521 Acc@5 81.197 loss 1.551
+* Acc@task 68.447 Acc@1 66.019 Acc@5 79.612 loss 1.633
+* Acc@task 68.580 Acc@1 67.372 Acc@5 86.405 loss 1.339
+* Acc@task 77.534 Acc@1 68.219 Acc@5 84.658 loss 1.395
+* Acc@task 76.744 Acc@1 72.425 Acc@5 89.701 loss 1.303
+[Average accuracy till task6]	Acc@task: 70.8724	Acc@1: 68.3817	Acc@5: 83.9187	Loss: 1.4658	Forgetting: 7.1068	Backward: -7.1068
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/pgc_02/imr_hideprompt_5e/test_24081/array_log.txt
+>>> processing on task: 6
+args.config:  imr_hideprompt_5e
+>>> angle list pre: {1: 81.92701310046088, 2: 80.75877391757591, 3: 82.67432163303626, 5: 80.84634671233015}
+>>> angle list all: {1: 80.77132900066077, 2: 80.86064463019066, 3: 77.04237968365406, 5: 77.16141272546533}
+>>> angle_epsilon:  80.84634671233015
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 2 >>> max_value 80.86064463019066
+>>> min_key: 3 >>> min_value 77.04237968365406
+>>> done!===========================================================================
+>>> top_k_keys:  [1, 2, 3]
+----------------def modify_available_list----------------
+>>> before modify: {0: 3, 1: 1, 2: 2, 3: 3, 4: 5, 5: 5}
+>>> : task6
+>>> after modify: {0: 3, 1: 1, 2: 6, 3: 3, 4: 5, 5: 5, 6: 6}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task7_checkpoint.pth
+>>> : task6, re-init params with task2
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 45.232280254364014
+----------------------------------------
+Gradient Constraints Summary (768, 14)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 29)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 51)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 53)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 50)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 68.194 Acc@1 66.846 Acc@5 78.706 loss 1.718
+* Acc@task 60.399 Acc@1 65.812 Acc@5 76.923 loss 1.725
+* Acc@task 72.816 Acc@1 67.476 Acc@5 79.612 loss 1.674
+* Acc@task 66.767 Acc@1 67.674 Acc@5 85.498 loss 1.380
+* Acc@task 74.247 Acc@1 65.753 Acc@5 79.452 loss 1.548
+* Acc@task 72.425 Acc@1 68.439 Acc@5 85.714 loss 1.387
+* Acc@task 69.697 Acc@1 60.269 Acc@5 80.808 loss 1.713
+[Average accuracy till task7]	Acc@task: 69.2207	Acc@1: 66.0384	Acc@5: 80.9591	Loss: 1.5921	Forgetting: 7.3041	Backward: -7.3041
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/pgc_02/imr_hideprompt_5e/test_24081/array_log.txt
+>>> processing on task: 7
+args.config:  imr_hideprompt_5e
+>>> angle list pre: {1: 81.81450405446282, 3: 82.5040474285528, 5: 80.77942666250469, 6: 80.98013960721477}
+>>> angle list all: {1: 80.79149560225099, 3: 77.0489414013444, 5: 77.14226535277243, 6: 77.40412773734542}
+>>> angle_epsilon:  80.98013960721477
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 1 >>> max_value 80.79149560225099
+>>> min_key: 3 >>> min_value 77.0489414013444
+>>> done!===========================================================================
+>>> top_k_keys:  [1, 3, 5]
+----------------def modify_available_list----------------
+>>> before modify: {0: 3, 1: 1, 2: 6, 3: 3, 4: 5, 5: 5, 6: 6}
+>>> : task7
+>>> after modify: {0: 3, 1: 1, 2: 6, 3: 3, 4: 5, 5: 5, 6: 6, 7: 7}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task8_checkpoint.pth
+>>> : task7, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 47.32889747619629
+layer 0 item key r 5
+----------------------------------------
+Gradient Constraints Summary (768, 5)
+----------------------------------------
+layer 1 item key r 12
+----------------------------------------
+Gradient Constraints Summary (768, 12)
+----------------------------------------
+layer 2 item key r 24
+----------------------------------------
+Gradient Constraints Summary (768, 24)
+----------------------------------------
+layer 3 item key r 24
+----------------------------------------
+Gradient Constraints Summary (768, 24)
+----------------------------------------
+layer 4 item key r 19
+----------------------------------------
+Gradient Constraints Summary (768, 19)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 67.116 Acc@1 65.768 Acc@5 78.167 loss 1.779
+* Acc@task 58.405 Acc@1 64.387 Acc@5 74.074 loss 1.874
+* Acc@task 72.816 Acc@1 66.019 Acc@5 78.155 loss 1.745
+* Acc@task 65.257 Acc@1 66.767 Acc@5 83.082 loss 1.449
+* Acc@task 70.685 Acc@1 63.836 Acc@5 77.534 loss 1.649
+* Acc@task 70.100 Acc@1 67.442 Acc@5 84.053 loss 1.452
+* Acc@task 67.677 Acc@1 60.606 Acc@5 82.492 loss 1.631
+* Acc@task 63.258 Acc@1 56.061 Acc@5 68.939 loss 2.100
+[Average accuracy till task8]	Acc@task: 66.9140	Acc@1: 63.8608	Acc@5: 78.3121	Loss: 1.7099	Forgetting: 7.3720	Backward: -7.3239
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/pgc_02/imr_hideprompt_5e/test_24081/array_log.txt
+>>> processing on task: 8
+args.config:  imr_hideprompt_5e
+>>> angle list pre: {1: 81.9276789790457, 3: 82.7424927086148, 5: 80.74080788204724, 6: 80.8316751375189, 7: 82.50186203712484}
+>>> angle list all: {1: 80.7983000195202, 3: 77.05653103839052, 5: 77.17265392873794, 6: 77.39188843715016, 7: 82.02123881271172}
+>>> angle_epsilon:  82.50186203712484
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 7 >>> max_value 82.02123881271172
+>>> min_key: 3 >>> min_value 77.05653103839052
+>>> done!===========================================================================
+>>> top_k_keys:  [1, 3, 5]
+----------------def modify_available_list----------------
+>>> before modify: {0: 3, 1: 1, 2: 6, 3: 3, 4: 5, 5: 5, 6: 6, 7: 7}
+>>> : task8
+>>> after modify: {0: 3, 1: 1, 2: 6, 3: 3, 4: 5, 5: 5, 6: 6, 7: 7, 8: 8}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task9_checkpoint.pth
+>>> : task8, no need to re-init params
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 46.93927240371704
+layer 0 item key r 5
+----------------------------------------
+Gradient Constraints Summary (768, 5)
+----------------------------------------
+layer 1 item key r 16
+----------------------------------------
+Gradient Constraints Summary (768, 16)
+----------------------------------------
+layer 2 item key r 26
+----------------------------------------
+Gradient Constraints Summary (768, 26)
+----------------------------------------
+layer 3 item key r 28
+----------------------------------------
+Gradient Constraints Summary (768, 28)
+----------------------------------------
+layer 4 item key r 27
+----------------------------------------
+Gradient Constraints Summary (768, 27)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 62.803 Acc@1 62.534 Acc@5 75.741 loss 1.961
+* Acc@task 58.120 Acc@1 62.678 Acc@5 74.359 loss 1.901
+* Acc@task 73.301 Acc@1 66.019 Acc@5 78.641 loss 1.777
+* Acc@task 65.257 Acc@1 66.163 Acc@5 82.477 loss 1.522
+* Acc@task 70.685 Acc@1 63.288 Acc@5 75.890 loss 1.719
+* Acc@task 67.110 Acc@1 68.106 Acc@5 85.050 loss 1.471
+* Acc@task 62.290 Acc@1 59.259 Acc@5 79.461 loss 1.733
+* Acc@task 60.227 Acc@1 56.439 Acc@5 70.833 loss 2.115
+* Acc@task 67.763 Acc@1 69.408 Acc@5 80.263 loss 1.527
+[Average accuracy till task9]	Acc@task: 65.2839	Acc@1: 63.7661	Acc@5: 78.0796	Loss: 1.7473	Forgetting: 7.2978	Backward: -7.2084
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/pgc_02/imr_hideprompt_5e/test_24081/array_log.txt
+>>> processing on task: 9
+args.config:  imr_hideprompt_5e
+>>> angle list pre: {1: 82.01080616453461, 3: 82.71478332186973, 5: 80.90046768369234, 6: 80.97919858444426, 7: 82.47987412658082, 8: 81.01700224487867}
+>>> angle list all: {1: 80.76376681263541, 3: 77.03466609600594, 5: 77.16356730139928, 6: 77.41519725193695, 7: 82.01796310321755, 8: 81.01376455436755}
+>>> angle_epsilon:  81.01700224487867
+>>> all angle list:=================================================================
+>>> done!===========================================================================
+>>> max_key: 7 >>> max_value 82.01796310321755
+>>> min_key: 3 >>> min_value 77.03466609600594
+>>> done!===========================================================================
+>>> top_k_keys:  [1, 3, 5]
+----------------def modify_available_list----------------
+>>> before modify: {0: 3, 1: 1, 2: 6, 3: 3, 4: 5, 5: 5, 6: 6, 7: 7, 8: 8}
+>>> : task9
+>>> after modify: {0: 3, 1: 1, 2: 6, 3: 3, 4: 5, 5: 5, 6: 6, 7: 9, 8: 8, 9: 9}
+----------------def modify_available_list----------------
+Loading checkpoint from: ./ckpt_for_hidep/imr/imr_b_0_inc_20/imr_hideprompt_5e/test_29505/checkpoint/task10_checkpoint.pth
+>>> : task9, re-init params with task7
+e_prompt.prompt.grad is not None
+torch.Size([5, 2, 20, 12, 64])
+torch.Size([5, 2, 1, 20, 12, 64])
+>>> : need to build memory
+get_prefix_matrix use: 43.49742102622986
+----------------------------------------
+Gradient Constraints Summary (768, 10)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 29)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 51)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 51)
+----------------------------------------
+----------------------------------------
+Gradient Constraints Summary (768, 40)
+----------------------------------------
+e 0 key torch.Size([768, 768])
+item key
+e 1 key torch.Size([768, 768])
+item key
+e 2 key torch.Size([768, 768])
+item key
+e 3 key torch.Size([768, 768])
+item key
+e 4 key torch.Size([768, 768])
+item key
+* Acc@task 61.995 Acc@1 61.995 Acc@5 74.394 loss 2.019
+* Acc@task 59.829 Acc@1 62.108 Acc@5 73.504 loss 1.988
+* Acc@task 73.786 Acc@1 66.505 Acc@5 79.126 loss 1.785
+* Acc@task 63.746 Acc@1 64.955 Acc@5 80.060 loss 1.614
+* Acc@task 66.575 Acc@1 61.370 Acc@5 73.699 loss 1.837
+* Acc@task 62.458 Acc@1 65.116 Acc@5 79.402 loss 1.643
+* Acc@task 63.300 Acc@1 59.596 Acc@5 76.768 loss 1.779
+* Acc@task 65.530 Acc@1 57.576 Acc@5 69.697 loss 2.130
+* Acc@task 68.421 Acc@1 70.724 Acc@5 80.592 loss 1.531
+* Acc@task 65.714 Acc@1 62.381 Acc@5 84.286 loss 1.606
+[Average accuracy till task10]	Acc@task: 65.1355	Acc@1: 63.2325	Acc@5: 77.1528	Loss: 1.7933	Forgetting: 7.1984	Backward: -6.8464
+NumPy array :stat_matrix saved to ./typical_setting/imr_B_0_INC_20/hideprompt/pgc_02/imr_hideprompt_5e/test_24081/array_log.txt
+Total training time: 5:24:48
