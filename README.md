@@ -84,3 +84,13 @@ Due to potential factors such as the experimental environment and CUDA version, 
 # Envs
 
 Please refer to `./issue2/LW2G/requirements.txt`.
+
+
+
+## Acknowledgement
+The implentation of Prompt-based continual learning is based on [HidePrompt](https://github.com/thu-ml/HiDe-Prompt). And the implentation of the orthoganol condition in gradient-based continual learning is based on [PGP](https://github.com/JingyangQiao/prompt-gradient-projection).
+
+Many thanks to its contributors!
+
+
+
